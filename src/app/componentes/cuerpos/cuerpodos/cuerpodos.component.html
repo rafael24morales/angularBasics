@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1 class="display-8">Hello, {{username}}</h1>
+  <h1>Usuario Actual {{UsuarioActual.username}}</h1>
+  <h2>Email del usuario Actual {{getEmail()}}</h2>
+
+  <input type="text" value="{{username}}">
+
+  <!--property binding-->
+  <input type="text" [id]="miAiDi" [hidden]="ocultar"
+  value="Vamo a desaparecer">
+
+  <!-- event binding-->
+  <button type="button" name="button" (click)="tuglea()">Pikele</button>
+
+  <!-- directivas ngIf-->
+  <div *ngIf="isVisible" >es visible D:</div>
+  <div *ngIf="A < B" >es correpto</div>
+  <div *ngIf="A === 'A'" >es correpto A es Igual a 'A'</div>
+  <div *ngIf="esVerdadero()" >es correpta la función</div>
+
+  <!-- directiva ngFor-->
+  <ul>
+    <li *ngFor = "let item of arreglodecosas; let i = index">
+      elemento {{ i+1 }}: {{item.cosa}} con valor: {{item.valor}}
+    </li>
+  </ul>
+
+
+
+</div>
