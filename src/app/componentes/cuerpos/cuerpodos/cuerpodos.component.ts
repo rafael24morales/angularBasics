@@ -46,8 +46,8 @@ export class CuerpodosComponent implements OnInit {
 
   //para las directivas ngIf
   public isVisible:boolean=false;
-  public A:number='A';
-  public B:char='B';
+  public A='A';
+  public B='B';
   public esVerdadero(){
     return true;
   }

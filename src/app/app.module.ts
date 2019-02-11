@@ -10,6 +10,10 @@ import { CuerpounoComponent } from './componentes/cuerpos/cuerpouno/cuerpouno.co
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CuerpodosComponent } from './componentes/cuerpos/cuerpodos/cuerpodos.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { VuelosService } from './servicios/vuelos.service';
+
 import { Rutas } from './rutas';
 
 /*necesito importar ruta y modulo
@@ -31,10 +35,11 @@ const rutas:Routes = [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    Rutas
+    Rutas,
+    HttpClientModule
     //debería agregar RouterModule.forRoot(rutas)
   ],
-  providers: [],
+  providers: [VuelosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
