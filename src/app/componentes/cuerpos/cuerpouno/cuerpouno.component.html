@@ -1,9 +1,32 @@
+
+<div class="card text-center" *ngFor="let item of vuelosData;">
+  <div class="card-header">
+    Salida de: {{item.aeropuerto}} vuela con: {{item.aerolinea}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Con destino a: </h5>
+    <p class="card-text">{{item.ruta}}</p>
+    <a href="#" class="btn btn-primary">Compra</a>
+  </div>
+</div>
+
 <div class="jumbotron">
   <h1 class="display-4">Hello, Componente uno</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <div>
+      <label for="aeropuerto">Aeropuerto:</label>
+      <input id="aeropuerto" type="text" name="aeropuerto" #aeropuerto>
+    </div>
+
+    <div>
+      <label for="vuelo">Vuelo:</label>
+      <input id="vuelo" type="text" name="aerolinea"  #aerolinea>
+    </div>
+    <div>
+      <label for="ruta">Ruta:</label>
+      <input id="ruta" type="text" name="ruta" value="" #ruta>
+    </div>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <a class="btn btn-primary btn-lg" role="button"
+    (click)="crearVuelo(aeropuerto.value,aerolinea.value,ruta.value)">Submit Formulario</a>
   </p>
 </div>
